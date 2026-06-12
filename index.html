@@ -6,15 +6,15 @@
   data-env="production"
   js-version="v11">
 <head>
-  <script>
+ <script>
 (function () {
   var params = new URLSearchParams(window.location.search);
-  var adCampaignId = (params.get("ad_campaign_id") || "").trim();
 
-  if (!adCampaignId) {
+  if (params.get("kt") !== "1") {
     window.location.replace("https://pumba.today/got");
   }
 })();
+</script>
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
