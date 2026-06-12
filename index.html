@@ -6,11 +6,12 @@
   data-env="production"
   js-version="v11">
 <head>
- <script>
+<script>
 (function () {
   var params = new URLSearchParams(window.location.search);
+  var v1 = (params.get("var_1") || "").trim();
 
-  if (params.get("kt") !== "1") {
+  if (!v1) {
     window.location.replace("https://pumba.today/got");
   }
 })();
